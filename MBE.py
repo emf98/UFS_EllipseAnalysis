@@ -68,19 +68,19 @@ def BP_bulk_array(actual, forecast):
             sig_pvals[i,0,j]  = p
         
             #14 days
-            mbe, errs, p, sig = calculate_mbe(a[:, j, 14], f[:, j, 14])
+            mbe, errs, p, sig = calculate_mbe(a[:, j, 7:13], f[:, j, 7:13])
             error_bulk[i,1,j] = mbe
             sig_mask[i,1,j]   = sig
             sig_pvals[i,1,j]  = p
         
             #20 days
-            mbe, errs, p, sig = calculate_mbe(a[:, j, 20], f[:, j, 20])
+            mbe, errs, p, sig = calculate_mbe(a[:, j, 14:20], f[:, j, 14:20])
             error_bulk[i,2,j] = mbe
             sig_mask[i,2,j]   = sig
             sig_pvals[i,2,j]  = p
         
             #30 days
-            mbe, errs, p, sig = calculate_mbe(a[:, j, 30], f[:, j, 30])
+            mbe, errs, p, sig = calculate_mbe(a[:, j, 21:30], f[:, j, 21:30])
             error_bulk[i,3,j] = mbe
             sig_mask[i,3,j]   = sig
             sig_pvals[i,3,j]  = p
@@ -100,15 +100,18 @@ def BW_bulk_array(actual, forecast):
             error_bulk[i,0,j] = error_all_yearly_mean
 
             #14 days
-            error_14 = calculate_errors(a[:,j,14], f[:,j,14])
+            error_14 = calculate_errors(a[:,j,7:13], f[:,j,7:13])
+            error_14 = np.nanmean(error_14, axis=1) 
             error_bulk[i,1,j] = error_14
 
             #20 days
-            error_20 = calculate_errors(a[:,j,20], f[:,j,20])
+            error_20 = calculate_errors(a[:,j,14:20], f[:,j,14:20])
+            error_20 = np.nanmean(error_20, axis=1) 
             error_bulk[i,2,j] = error_20
 
             #30 days
-            error_30 = calculate_errors(a[:,j,30], f[:,j,30])
+            error_30 = calculate_errors(a[:,j,21:30], f[:,j,21:30])
+            error_30 = np.nanmean(error_30, axis=1) 
             error_bulk[i,3,j] = error_30
             
     return error_bulk
