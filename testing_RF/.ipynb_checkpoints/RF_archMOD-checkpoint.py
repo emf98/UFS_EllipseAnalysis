@@ -53,11 +53,11 @@ def temp_files(shift,region,region_type,idx):
     
     ##reshape temp files again to introduce lag. 
     f_output = temp[:52,shift:].reshape(52*idx)
-    print("Check temp shape:", f_output.shape)
+    #print("Check temp shape:", f_output.shape)
     
     ##reshaping climo
     f_climo = climo[:52,shift:,:].reshape(52*idx,2)
-    print("Check climo shape:", f_climo.shape)
+    #print("Check climo shape:", f_climo.shape)
 
     #load output data file for TESTING
     infile = open(f'./new_data/2classtemps_{str(region_type)}.p',"rb",)
