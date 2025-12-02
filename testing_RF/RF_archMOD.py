@@ -34,6 +34,8 @@ from sklearn.feature_selection import SelectFromModel
 import warnings
 warnings.filterwarnings('ignore')
 
+from SkillStats_MOD import BSS, RAS, PAS
+
 #_____________________________________________________________________#
 #collect temp files.
 def temp_files(shift,region,region_type,idx):

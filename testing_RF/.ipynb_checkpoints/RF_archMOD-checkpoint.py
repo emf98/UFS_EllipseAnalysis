@@ -34,6 +34,8 @@ from sklearn.feature_selection import SelectFromModel
 import warnings
 warnings.filterwarnings('ignore')
 
+from SkillStats_MOD import BSS, RAS, PAS
+
 #_____________________________________________________________________#
 #collect temp files.
 def temp_files(shift,region,region_type,idx):
@@ -184,7 +186,7 @@ def calculate_accuracy(y_true, y_prob, threshold=0.5):
     return np.mean(y_true == y_pred)
 
 ##definition for RF loop with confidence evaluation
-def rf_90thpercentile(n,shift,idx, train_input, test_input, region1, region_type):
+def rf_90thpercentile(n,shift,idx,train_input, test_input, region1, region_type):
 
     ##collect temp files using def above.
     train_output, train_climo, test_output, test_climo = temp_files(shift, region1,region_type,idx)
