@@ -1,0 +1,105 @@
+Working on Europe_ERA5 ...
+Begin CV ...
+###################################################
+Accuracy, Validation: 57.81%
+Accuracy, Training: 63.11%
+Accuracy, Testing: 60.55%
+_____________________________________
+Working on Europe_Prototype5 ...
+Begin CV ...
+###################################################
+Accuracy, Validation: 56.90%
+Accuracy, Training: 63.21%
+Accuracy, Testing: 61.99%
+_____________________________________
+Working on Europe_Prototype6 ...
+Begin CV ...
+###################################################
+Accuracy, Validation: 58.13%
+Accuracy, Training: 63.16%
+Accuracy, Testing: 56.74%
+_____________________________________
+Working on Europe_Prototype7 ...
+Begin CV ...
+###################################################
+Accuracy, Validation: 57.49%
+Accuracy, Training: 63.16%
+Accuracy, Testing: 58.22%
+_____________________________________
+Working on Europe_Prototype8 ...
+Begin CV ...
+###################################################
+Accuracy, Validation: 57.62%
+Accuracy, Training: 63.09%
+Accuracy, Testing: 53.60%
+_____________________________________
+Working on Canada_ERA5 ...
+Begin CV ...
+###################################################
+Accuracy, Validation: 70.13%
+Accuracy, Training: 72.17%
+Accuracy, Testing: 74.50%
+_____________________________________
+Working on Canada_Prototype5 ...
+Begin CV ...
+###################################################
+Accuracy, Validation: 69.82%
+Accuracy, Training: 72.18%
+Accuracy, Testing: 68.35%
+_____________________________________
+Working on Canada_Prototype6 ...
+Begin CV ...
+###################################################
+Accuracy, Validation: 69.77%
+Accuracy, Training: 72.22%
+Accuracy, Testing: 67.78%
+_____________________________________
+Working on Canada_Prototype7 ...
+Begin CV ...
+###################################################
+Accuracy, Validation: 70.20%
+Accuracy, Training: 72.19%
+Accuracy, Testing: 68.93%
+_____________________________________
+Working on Canada_Prototype8 ...
+Begin CV ...
+###################################################
+Accuracy, Validation: 70.25%
+Accuracy, Training: 72.11%
+Accuracy, Testing: 69.20%
+_____________________________________
+Working on SEUS_ERA5 ...
+Begin CV ...
+###################################################
+Accuracy, Validation: 61.35%
+Accuracy, Training: 63.17%
+Accuracy, Testing: 57.66%
+_____________________________________
+Working on SEUS_Prototype5 ...
+Begin CV ...
+###################################################
+Accuracy, Validation: 61.63%
+Accuracy, Training: 63.18%
+Accuracy, Testing: 53.59%
+_____________________________________
+Working on SEUS_Prototype6 ...
+Begin CV ...
+###################################################
+Accuracy, Validation: 61.00%
+Accuracy, Training: 63.25%
+Accuracy, Testing: 61.64%
+_____________________________________
+Working on SEUS_Prototype7 ...
+Begin CV ...
+###################################################
+Accuracy, Validation: 60.96%
+Accuracy, Training: 63.22%
+Accuracy, Testing: 57.02%
+_____________________________________
+Working on SEUS_Prototype8 ...
+Begin CV ...
+###################################################
+Accuracy, Validation: 60.87%
+Accuracy, Training: 63.30%
+Accuracy, Testing: 57.59%
+_____________________________________
