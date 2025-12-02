@@ -103,3 +103,761 @@ Accuracy, Validation: 60.87%
 Accuracy, Training: 63.30%
 Accuracy, Testing: 57.59%
 _____________________________________
+
+##################################################################################################################################################################################################
+
+Working on Europe_ERA5 ...
+ 
+Creating lists ...
+ 
+Establishing RF hyperparams ...
+ 
+Begin RF CV.
+ 
+END CV.
+ 
+ 
+###################################################
+Accuracy, Validation: 57.27%
+Accuracy, Training: 62.08%
+Accuracy, Testing: 58.62%
+_____________________________________________________________________
+Brier Skill Score (Train): 0.0719
+Brier Skill Score (Test): 0.0419
+Brier Skill Score (Validation): 0.0196
+_____________________________________________________________________
+Recall and Precision: Neg Cat
+#########
+Recall Accuracy Score (Train): 0.7523
+Recall Accuracy Score (Test): 0.7803
+Recall AccuracyScore (Validation): 0.7135
+Precision Accuracy Score (Train): 0.6107
+Precision Accuracy Score (Test): 0.5605
+Precision AccuracyScore (Validation): 0.5688
+_____________________________________________________________________
+Recall and Precision: Pos Cat
+#########
+Recall Accuracy Score (Train): 0.4775
+Recall Accuracy Score (Test): 0.3952
+Recall AccuracyScore (Validation): 0.4244
+Precision Accuracy Score (Train): 0.6401
+Precision Accuracy Score (Test): 0.6468
+Precision AccuracyScore (Validation): 0.5851
+_____________________________________________________________________
+Average Num. of 10% Confident and Correct Postive Predictions: 38.42%
+Average Num. of 10% Confident and Correct Negative Predictions: 29.41%
+Average Num. of 10% Confident and FALSE Postive Predictions: 11.58%
+Average Num. of 10% Confident and FALSE Negative Predictions: 20.60%
+#######################################################################
+Average Num. of 10% Confident and Correct Predictions: 67.83%
+Average Num. of 10% Confident and FALSE Predictions: 32.17%
+ 
+ 
+Trying SHAP ...
+Done.
+_____________________________________
+Working on Europe_Prototype5 ...
+ 
+Creating lists ...
+ 
+Establishing RF hyperparams ...
+ 
+Begin RF CV.
+ 
+END CV.
+ 
+ 
+###################################################
+Accuracy, Validation: 57.07%
+Accuracy, Training: 62.10%
+Accuracy, Testing: 60.35%
+_____________________________________________________________________
+Brier Skill Score (Train): 0.0723
+Brier Skill Score (Test): 0.0588
+Brier Skill Score (Validation): 0.0192
+_____________________________________________________________________
+Recall and Precision: Neg Cat
+#########
+Recall Accuracy Score (Train): 0.7640
+Recall Accuracy Score (Test): 0.8311
+Recall AccuracyScore (Validation): 0.7286
+Precision Accuracy Score (Train): 0.6090
+Precision Accuracy Score (Test): 0.5476
+Precision AccuracyScore (Validation): 0.5649
+_____________________________________________________________________
+Recall and Precision: Pos Cat
+#########
+Recall Accuracy Score (Train): 0.4654
+Recall Accuracy Score (Test): 0.4086
+Recall AccuracyScore (Validation): 0.4041
+Precision Accuracy Score (Train): 0.6448
+Precision Accuracy Score (Test): 0.7393
+Precision AccuracyScore (Validation): 0.5869
+_____________________________________________________________________
+Average Num. of 10% Confident and Correct Postive Predictions: 44.89%
+Average Num. of 10% Confident and Correct Negative Predictions: 28.29%
+Average Num. of 10% Confident and FALSE Postive Predictions: 5.10%
+Average Num. of 10% Confident and FALSE Negative Predictions: 21.72%
+#######################################################################
+Average Num. of 10% Confident and Correct Predictions: 73.18%
+Average Num. of 10% Confident and FALSE Predictions: 26.82%
+ 
+ 
+Trying SHAP ...
+Done.
+_____________________________________
+Working on Europe_Prototype6 ...
+ 
+Creating lists ...
+ 
+Establishing RF hyperparams ...
+ 
+Begin RF CV.
+ 
+END CV.
+ 
+ 
+###################################################
+Accuracy, Validation: 58.04%
+Accuracy, Training: 61.94%
+Accuracy, Testing: 55.22%
+_____________________________________________________________________
+Brier Skill Score (Train): 0.0710
+Brier Skill Score (Test): 0.0160
+Brier Skill Score (Validation): 0.0235
+_____________________________________________________________________
+Recall and Precision: Neg Cat
+#########
+Recall Accuracy Score (Train): 0.7492
+Recall Accuracy Score (Test): 0.7564
+Recall AccuracyScore (Validation): 0.7184
+Precision Accuracy Score (Train): 0.6092
+Precision Accuracy Score (Test): 0.5215
+Precision AccuracyScore (Validation): 0.5790
+_____________________________________________________________________
+Recall and Precision: Pos Cat
+#########
+Recall Accuracy Score (Train): 0.4785
+Recall Accuracy Score (Test): 0.3666
+Recall AccuracyScore (Validation): 0.4329
+Precision Accuracy Score (Train): 0.6391
+Precision Accuracy Score (Test): 0.6220
+Precision AccuracyScore (Validation): 0.5880
+_____________________________________________________________________
+Average Num. of 10% Confident and Correct Postive Predictions: 34.75%
+Average Num. of 10% Confident and Correct Negative Predictions: 29.32%
+Average Num. of 10% Confident and FALSE Postive Predictions: 15.24%
+Average Num. of 10% Confident and FALSE Negative Predictions: 20.68%
+#######################################################################
+Average Num. of 10% Confident and Correct Predictions: 64.07%
+Average Num. of 10% Confident and FALSE Predictions: 35.93%
+ 
+ 
+Trying SHAP ...
+Done.
+_____________________________________
+Working on Europe_Prototype7 ...
+ 
+Creating lists ...
+ 
+Establishing RF hyperparams ...
+ 
+Begin RF CV.
+ 
+END CV.
+ 
+ 
+###################################################
+Accuracy, Validation: 57.86%
+Accuracy, Training: 62.00%
+Accuracy, Testing: 56.78%
+_____________________________________________________________________
+Brier Skill Score (Train): 0.0711
+Brier Skill Score (Test): 0.0306
+Brier Skill Score (Validation): 0.0227
+_____________________________________________________________________
+Recall and Precision: Neg Cat
+#########
+Recall Accuracy Score (Train): 0.7531
+Recall Accuracy Score (Test): 0.7617
+Recall AccuracyScore (Validation): 0.7215
+Precision Accuracy Score (Train): 0.6093
+Precision Accuracy Score (Test): 0.5503
+Precision AccuracyScore (Validation): 0.5764
+_____________________________________________________________________
+Recall and Precision: Pos Cat
+#########
+Recall Accuracy Score (Train): 0.4754
+Recall Accuracy Score (Test): 0.3732
+Recall AccuracyScore (Validation): 0.4267
+Precision Accuracy Score (Train): 0.6411
+Precision Accuracy Score (Test): 0.6096
+Precision AccuracyScore (Validation): 0.5884
+_____________________________________________________________________
+Average Num. of 10% Confident and Correct Postive Predictions: 38.54%
+Average Num. of 10% Confident and Correct Negative Predictions: 28.67%
+Average Num. of 10% Confident and FALSE Postive Predictions: 11.46%
+Average Num. of 10% Confident and FALSE Negative Predictions: 21.33%
+#######################################################################
+Average Num. of 10% Confident and Correct Predictions: 67.21%
+Average Num. of 10% Confident and FALSE Predictions: 32.79%
+ 
+ 
+Trying SHAP ...
+Done.
+_____________________________________
+Working on Europe_Prototype8 ...
+ 
+Creating lists ...
+ 
+Establishing RF hyperparams ...
+ 
+Begin RF CV.
+ 
+END CV.
+ 
+ 
+###################################################
+Accuracy, Validation: 57.66%
+Accuracy, Training: 62.08%
+Accuracy, Testing: 51.31%
+_____________________________________________________________________
+Brier Skill Score (Train): 0.0714
+Brier Skill Score (Test): -0.0275
+Brier Skill Score (Validation): 0.0224
+_____________________________________________________________________
+Recall and Precision: Neg Cat
+#########
+Recall Accuracy Score (Train): 0.7557
+Recall Accuracy Score (Test): 0.7142
+Recall AccuracyScore (Validation): 0.7238
+Precision Accuracy Score (Train): 0.6100
+Precision Accuracy Score (Test): 0.5008
+Precision AccuracyScore (Validation): 0.5721
+_____________________________________________________________________
+Recall and Precision: Pos Cat
+#########
+Recall Accuracy Score (Train): 0.4740
+Recall Accuracy Score (Test): 0.3222
+Recall AccuracyScore (Validation): 0.4211
+Precision Accuracy Score (Train): 0.6419
+Precision Accuracy Score (Test): 0.5403
+Precision AccuracyScore (Validation): 0.5904
+_____________________________________________________________________
+Average Num. of 10% Confident and Correct Postive Predictions: 30.11%
+Average Num. of 10% Confident and Correct Negative Predictions: 26.62%
+Average Num. of 10% Confident and FALSE Postive Predictions: 19.87%
+Average Num. of 10% Confident and FALSE Negative Predictions: 23.40%
+#######################################################################
+Average Num. of 10% Confident and Correct Predictions: 56.73%
+Average Num. of 10% Confident and FALSE Predictions: 43.27%
+ 
+ 
+Trying SHAP ...
+Done.
+______________________________
+
+
+Working on Canada_ERA5 ...
+ 
+Creating lists ...
+ 
+Establishing RF hyperparams ...
+ 
+Begin RF CV.
+ 
+END CV.
+ 
+ 
+###################################################
+Accuracy, Validation: 70.62%
+Accuracy, Training: 71.93%
+Accuracy, Testing: 75.67%
+_____________________________________________________________________
+Brier Skill Score (Train): 0.2188
+Brier Skill Score (Test): 0.2056
+Brier Skill Score (Validation): 0.1816
+_____________________________________________________________________
+Recall and Precision: Neg Cat
+#########
+Recall Accuracy Score (Train): 0.8754
+Recall Accuracy Score (Test): 0.8808
+Recall AccuracyScore (Validation): 0.8645
+Precision Accuracy Score (Train): 0.7042
+Precision Accuracy Score (Test): 0.7542
+Precision AccuracyScore (Validation): 0.6993
+_____________________________________________________________________
+Recall and Precision: Pos Cat
+#########
+Recall Accuracy Score (Train): 0.5123
+Recall Accuracy Score (Test): 0.5720
+Recall AccuracyScore (Validation): 0.4907
+Precision Accuracy Score (Train): 0.7563
+Precision Accuracy Score (Test): 0.7662
+Precision AccuracyScore (Validation): 0.7257
+_____________________________________________________________________
+Average Num. of 10% Confident and Correct Postive Predictions: 42.84%
+Average Num. of 10% Confident and Correct Negative Predictions: 34.34%
+Average Num. of 10% Confident and FALSE Postive Predictions: 7.19%
+Average Num. of 10% Confident and FALSE Negative Predictions: 15.63%
+#######################################################################
+Average Num. of 10% Confident and Correct Predictions: 77.18%
+Average Num. of 10% Confident and FALSE Predictions: 22.82%
+ 
+ 
+Trying SHAP ...
+Done.
+_____________________________________
+Working on Canada_Prototype5 ...
+ 
+Creating lists ...
+ 
+Establishing RF hyperparams ...
+ 
+Begin RF CV.
+ 
+END CV.
+ 
+ 
+###################################################
+Accuracy, Validation: 70.36%
+Accuracy, Training: 71.99%
+Accuracy, Testing: 69.32%
+_____________________________________________________________________
+Brier Skill Score (Train): 0.2199
+Brier Skill Score (Test): 0.1652
+Brier Skill Score (Validation): 0.1776
+_____________________________________________________________________
+Recall and Precision: Neg Cat
+#########
+Recall Accuracy Score (Train): 0.8753
+Recall Accuracy Score (Test): 0.8796
+Recall AccuracyScore (Validation): 0.8607
+Precision Accuracy Score (Train): 0.7048
+Precision Accuracy Score (Test): 0.6489
+Precision AccuracyScore (Validation): 0.6978
+_____________________________________________________________________
+Recall and Precision: Pos Cat
+#########
+Recall Accuracy Score (Train): 0.5137
+Recall Accuracy Score (Test): 0.4962
+Recall AccuracyScore (Validation): 0.4899
+Precision Accuracy Score (Train): 0.7565
+Precision Accuracy Score (Test): 0.7988
+Precision AccuracyScore (Validation): 0.7201
+_____________________________________________________________________
+Average Num. of 10% Confident and Correct Postive Predictions: 46.19%
+Average Num. of 10% Confident and Correct Negative Predictions: 34.31%
+Average Num. of 10% Confident and FALSE Postive Predictions: 3.85%
+Average Num. of 10% Confident and FALSE Negative Predictions: 15.65%
+#######################################################################
+Average Num. of 10% Confident and Correct Predictions: 80.50%
+Average Num. of 10% Confident and FALSE Predictions: 19.50%
+ 
+ 
+Trying SHAP ...
+Done.
+_____________________________________
+Working on Canada_Prototype6 ...
+ 
+Creating lists ...
+ 
+Establishing RF hyperparams ...
+ 
+Begin RF CV.
+ 
+END CV.
+ 
+ 
+###################################################
+Accuracy, Validation: 70.41%
+Accuracy, Training: 71.99%
+Accuracy, Testing: 69.23%
+_____________________________________________________________________
+Brier Skill Score (Train): 0.2196
+Brier Skill Score (Test): 0.1744
+Brier Skill Score (Validation): 0.1799
+_____________________________________________________________________
+Recall and Precision: Neg Cat
+#########
+Recall Accuracy Score (Train): 0.8752
+Recall Accuracy Score (Test): 0.8671
+Recall AccuracyScore (Validation): 0.8588
+Precision Accuracy Score (Train): 0.7052
+Precision Accuracy Score (Test): 0.6615
+Precision AccuracyScore (Validation): 0.6977
+_____________________________________________________________________
+Recall and Precision: Pos Cat
+#########
+Recall Accuracy Score (Train): 0.5136
+Recall Accuracy Score (Test): 0.4922
+Recall AccuracyScore (Validation): 0.4952
+Precision Accuracy Score (Train): 0.7559
+Precision Accuracy Score (Test): 0.7678
+Precision AccuracyScore (Validation): 0.7215
+_____________________________________________________________________
+Average Num. of 10% Confident and Correct Postive Predictions: 48.56%
+Average Num. of 10% Confident and Correct Negative Predictions: 34.29%
+Average Num. of 10% Confident and FALSE Postive Predictions: 1.44%
+Average Num. of 10% Confident and FALSE Negative Predictions: 15.71%
+#######################################################################
+Average Num. of 10% Confident and Correct Predictions: 82.85%
+Average Num. of 10% Confident and FALSE Predictions: 17.15%
+ 
+ 
+Trying SHAP ...
+Done.
+_____________________________________
+Working on Canada_Prototype7 ...
+ 
+Creating lists ...
+ 
+Establishing RF hyperparams ...
+ 
+Begin RF CV.
+ 
+END CV.
+ 
+ 
+###################################################
+Accuracy, Validation: 70.43%
+Accuracy, Training: 71.95%
+Accuracy, Testing: 70.11%
+_____________________________________________________________________
+Brier Skill Score (Train): 0.2189
+Brier Skill Score (Test): 0.1804
+Brier Skill Score (Validation): 0.1811
+_____________________________________________________________________
+Recall and Precision: Neg Cat
+#########
+Recall Accuracy Score (Train): 0.8753
+Recall Accuracy Score (Test): 0.8881
+Recall AccuracyScore (Validation): 0.8631
+Precision Accuracy Score (Train): 0.7047
+Precision Accuracy Score (Test): 0.6533
+Precision AccuracyScore (Validation): 0.6965
+_____________________________________________________________________
+Recall and Precision: Pos Cat
+#########
+Recall Accuracy Score (Train): 0.5123
+Recall Accuracy Score (Test): 0.5050
+Recall AccuracyScore (Validation): 0.4902
+Precision Accuracy Score (Train): 0.7557
+Precision Accuracy Score (Test): 0.8144
+Precision AccuracyScore (Validation): 0.7258
+_____________________________________________________________________
+Average Num. of 10% Confident and Correct Postive Predictions: 45.61%
+Average Num. of 10% Confident and Correct Negative Predictions: 41.14%
+Average Num. of 10% Confident and FALSE Postive Predictions: 4.36%
+Average Num. of 10% Confident and FALSE Negative Predictions: 8.89%
+#######################################################################
+Average Num. of 10% Confident and Correct Predictions: 86.74%
+Average Num. of 10% Confident and FALSE Predictions: 13.26%
+ 
+ 
+Trying SHAP ...
+Done.
+_____________________________________
+Working on Canada_Prototype8 ...
+ 
+Creating lists ...
+ 
+Establishing RF hyperparams ...
+ 
+Begin RF CV.
+ 
+END CV.
+ 
+ 
+###################################################
+Accuracy, Validation: 70.37%
+Accuracy, Training: 71.97%
+Accuracy, Testing: 68.97%
+_____________________________________________________________________
+Brier Skill Score (Train): 0.2199
+Brier Skill Score (Test): 0.1895
+Brier Skill Score (Validation): 0.1776
+_____________________________________________________________________
+Recall and Precision: Neg Cat
+#########
+Recall Accuracy Score (Train): 0.8753
+Recall Accuracy Score (Test): 0.8700
+Recall AccuracyScore (Validation): 0.8614
+Precision Accuracy Score (Train): 0.7047
+Precision Accuracy Score (Test): 0.6527
+Precision AccuracyScore (Validation): 0.6978
+_____________________________________________________________________
+Recall and Precision: Pos Cat
+#########
+Recall Accuracy Score (Train): 0.5134
+Recall Accuracy Score (Test): 0.4921
+Recall AccuracyScore (Validation): 0.4887
+Precision Accuracy Score (Train): 0.7565
+Precision Accuracy Score (Test): 0.7778
+Precision AccuracyScore (Validation): 0.7202
+_____________________________________________________________________
+Average Num. of 10% Confident and Correct Postive Predictions: 46.98%
+Average Num. of 10% Confident and Correct Negative Predictions: 40.98%
+Average Num. of 10% Confident and FALSE Postive Predictions: 2.99%
+Average Num. of 10% Confident and FALSE Negative Predictions: 9.06%
+#######################################################################
+Average Num. of 10% Confident and Correct Predictions: 87.95%
+Average Num. of 10% Confident and FALSE Predictions: 12.05%
+ 
+ 
+Trying SHAP ...
+Done.
+_____________________________________
+
+Working on SEUS_ERA5 ...
+ 
+Creating lists ...
+ 
+Establishing RF hyperparams ...
+ 
+Begin RF CV.
+ 
+END CV.
+ 
+ 
+###################################################
+Accuracy, Validation: 61.37%
+Accuracy, Training: 63.29%
+Accuracy, Testing: 60.73%
+_____________________________________________________________________
+Brier Skill Score (Train): 0.0981
+Brier Skill Score (Test): 0.0434
+Brier Skill Score (Validation): 0.0644
+_____________________________________________________________________
+Recall and Precision: Neg Cat
+#########
+Recall Accuracy Score (Train): 0.7098
+Recall Accuracy Score (Test): 0.7254
+Recall AccuracyScore (Validation): 0.6987
+Precision Accuracy Score (Train): 0.6278
+Precision Accuracy Score (Test): 0.6314
+Precision AccuracyScore (Validation): 0.6075
+_____________________________________________________________________
+Recall and Precision: Pos Cat
+#########
+Recall Accuracy Score (Train): 0.5510
+Recall Accuracy Score (Test): 0.4554
+Recall AccuracyScore (Validation): 0.5238
+Precision Accuracy Score (Train): 0.6409
+Precision Accuracy Score (Test): 0.5635
+Precision AccuracyScore (Validation): 0.6234
+_____________________________________________________________________
+Average Num. of 10% Confident and Correct Postive Predictions: 29.95%
+Average Num. of 10% Confident and Correct Negative Predictions: 36.12%
+Average Num. of 10% Confident and FALSE Postive Predictions: 20.06%
+Average Num. of 10% Confident and FALSE Negative Predictions: 13.87%
+#######################################################################
+Average Num. of 10% Confident and Correct Predictions: 66.07%
+Average Num. of 10% Confident and FALSE Predictions: 33.93%
+ 
+ 
+Trying SHAP ...
+Done.
+_____________________________________
+Working on SEUS_Prototype5 ...
+ 
+Creating lists ...
+ 
+Establishing RF hyperparams ...
+ 
+Begin RF CV.
+ 
+END CV.
+ 
+ 
+###################################################
+Accuracy, Validation: 61.98%
+Accuracy, Training: 63.20%
+Accuracy, Testing: 53.76%
+_____________________________________________________________________
+Brier Skill Score (Train): 0.0969
+Brier Skill Score (Test): 0.0087
+Brier Skill Score (Validation): 0.0698
+_____________________________________________________________________
+Recall and Precision: Neg Cat
+#########
+Recall Accuracy Score (Train): 0.7130
+Recall Accuracy Score (Test): 0.6987
+Recall AccuracyScore (Validation): 0.7108
+Precision Accuracy Score (Train): 0.6260
+Precision Accuracy Score (Test): 0.5015
+Precision AccuracyScore (Validation): 0.6115
+_____________________________________________________________________
+Recall and Precision: Pos Cat
+#########
+Recall Accuracy Score (Train): 0.5456
+Recall Accuracy Score (Test): 0.3980
+Recall AccuracyScore (Validation): 0.5235
+Precision Accuracy Score (Train): 0.6413
+Precision Accuracy Score (Test): 0.6040
+Precision AccuracyScore (Validation): 0.6334
+_____________________________________________________________________
+Average Num. of 10% Confident and Correct Postive Predictions: 38.05%
+Average Num. of 10% Confident and Correct Negative Predictions: 35.71%
+Average Num. of 10% Confident and FALSE Postive Predictions: 11.96%
+Average Num. of 10% Confident and FALSE Negative Predictions: 14.27%
+#######################################################################
+Average Num. of 10% Confident and Correct Predictions: 73.76%
+Average Num. of 10% Confident and FALSE Predictions: 26.24%
+ 
+ 
+Trying SHAP ...
+Done.
+_____________________________________
+Working on SEUS_Prototype6 ...
+ 
+Creating lists ...
+ 
+Establishing RF hyperparams ...
+ 
+Begin RF CV.
+ 
+END CV.
+ 
+ 
+###################################################
+Accuracy, Validation: 61.49%
+Accuracy, Training: 63.28%
+Accuracy, Testing: 62.27%
+_____________________________________________________________________
+Brier Skill Score (Train): 0.0980
+Brier Skill Score (Test): 0.0631
+Brier Skill Score (Validation): 0.0653
+_____________________________________________________________________
+Recall and Precision: Neg Cat
+#########
+Recall Accuracy Score (Train): 0.7115
+Recall Accuracy Score (Test): 0.7707
+Recall AccuracyScore (Validation): 0.7001
+Precision Accuracy Score (Train): 0.6270
+Precision Accuracy Score (Test): 0.5920
+Precision AccuracyScore (Validation): 0.6095
+_____________________________________________________________________
+Recall and Precision: Pos Cat
+#########
+Recall Accuracy Score (Train): 0.5491
+Recall Accuracy Score (Test): 0.4769
+Recall AccuracyScore (Validation): 0.5243
+Precision Accuracy Score (Train): 0.6418
+Precision Accuracy Score (Test): 0.6790
+Precision AccuracyScore (Validation): 0.6237
+_____________________________________________________________________
+Average Num. of 10% Confident and Correct Postive Predictions: 35.27%
+Average Num. of 10% Confident and Correct Negative Predictions: 30.54%
+Average Num. of 10% Confident and FALSE Postive Predictions: 14.75%
+Average Num. of 10% Confident and FALSE Negative Predictions: 19.44%
+#######################################################################
+Average Num. of 10% Confident and Correct Predictions: 65.81%
+Average Num. of 10% Confident and FALSE Predictions: 34.19%
+ 
+ 
+Trying SHAP ...
+Done.
+_____________________________________
+Working on SEUS_Prototype7 ...
+ 
+Creating lists ...
+ 
+Establishing RF hyperparams ...
+ 
+Begin RF CV.
+ 
+END CV.
+ 
+ 
+###################################################
+Accuracy, Validation: 61.01%
+Accuracy, Training: 63.34%
+Accuracy, Testing: 58.62%
+_____________________________________________________________________
+Brier Skill Score (Train): 0.0990
+Brier Skill Score (Test): 0.0182
+Brier Skill Score (Validation): 0.0605
+_____________________________________________________________________
+Recall and Precision: Neg Cat
+#########
+Recall Accuracy Score (Train): 0.7122
+Recall Accuracy Score (Test): 0.7496
+Recall AccuracyScore (Validation): 0.6971
+Precision Accuracy Score (Train): 0.6275
+Precision Accuracy Score (Test): 0.5406
+Precision AccuracyScore (Validation): 0.6053
+_____________________________________________________________________
+Recall and Precision: Pos Cat
+#########
+Recall Accuracy Score (Train): 0.5496
+Recall Accuracy Score (Test): 0.4434
+Recall AccuracyScore (Validation): 0.5176
+Precision Accuracy Score (Train): 0.6427
+Precision Accuracy Score (Test): 0.6698
+Precision AccuracyScore (Validation): 0.6181
+_____________________________________________________________________
+Average Num. of 10% Confident and Correct Postive Predictions: 31.82%
+Average Num. of 10% Confident and Correct Negative Predictions: 31.51%
+Average Num. of 10% Confident and FALSE Postive Predictions: 18.20%
+Average Num. of 10% Confident and FALSE Negative Predictions: 18.47%
+#######################################################################
+Average Num. of 10% Confident and Correct Predictions: 63.33%
+Average Num. of 10% Confident and FALSE Predictions: 36.67%
+ 
+ 
+Trying SHAP ...
+Done.
+_____________________________________
+Working on SEUS_Prototype8 ...
+ 
+Creating lists ...
+ 
+Establishing RF hyperparams ...
+ 
+Begin RF CV.
+ 
+END CV.
+ 
+ 
+###################################################
+Accuracy, Validation: 61.61%
+Accuracy, Training: 63.27%
+Accuracy, Testing: 59.89%
+_____________________________________________________________________
+Brier Skill Score (Train): 0.0976
+Brier Skill Score (Test): 0.0272
+Brier Skill Score (Validation): 0.0669
+_____________________________________________________________________
+Recall and Precision: Neg Cat
+#########
+Recall Accuracy Score (Train): 0.7099
+Recall Accuracy Score (Test): 0.7524
+Recall AccuracyScore (Validation): 0.7028
+Precision Accuracy Score (Train): 0.6274
+Precision Accuracy Score (Test): 0.5630
+Precision AccuracyScore (Validation): 0.6101
+_____________________________________________________________________
+Recall and Precision: Pos Cat
+#########
+Recall Accuracy Score (Train): 0.5506
+Recall Accuracy Score (Test): 0.4561
+Recall AccuracyScore (Validation): 0.5240
+Precision Accuracy Score (Train): 0.6413
+Precision Accuracy Score (Test): 0.6646
+Precision AccuracyScore (Validation): 0.6262
+_____________________________________________________________________
+Average Num. of 10% Confident and Correct Postive Predictions: 31.66%
+Average Num. of 10% Confident and Correct Negative Predictions: 30.15%
+Average Num. of 10% Confident and FALSE Postive Predictions: 18.35%
+Average Num. of 10% Confident and FALSE Negative Predictions: 19.84%
+#######################################################################
+Average Num. of 10% Confident and Correct Predictions: 61.81%
+Average Num. of 10% Confident and FALSE Predictions: 38.19%
+ 
+ 
+Trying SHAP ...
+Done.
+_____________________________________
+
+Click to add a cell.
