@@ -1,1 +1,5 @@
 download_ufs/*
+UFS_metrics/FullArea_ERA5_GPH100.p
+UFS_metrics/FullArea_ERA5_GPHanoms100.p
+UFS_metrics/FullArea_UFS_GPH100.p
+UFS_metrics/FullArea_UFS_GPHanoms100.p
