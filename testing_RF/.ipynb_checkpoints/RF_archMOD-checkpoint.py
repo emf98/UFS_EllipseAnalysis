@@ -156,7 +156,7 @@ def rf_featselect(n,shift,idx, train_input, test_input, region1, region_type):
         pred_test1 = rf_reg1.predict(X_test)
         pred_test2 = rf_reg1.predict_proba(X_test)
         #p_test.append(pred_test2)
-        acc_reg1_test.append(accuracy_score(Y_test, pred_test1))
+        acc_reg1_test.append(accuracy_score(Y_test, pred_test1)) 
 
         #_______________________feature selection______________________________
         #prepare to show relevant features by actually ... choosing them 
@@ -186,7 +186,7 @@ def calculate_accuracy(y_true, y_prob, threshold=0.5):
     return np.mean(y_true == y_pred)
 
 ##definition for RF loop with confidence evaluation
-def rf_90thpercentile(n,shift,idx,train_input, test_input, region1, region_type):
+def rf_90thpercentile(n,shift,idx, train_input, test_input, era5_truth, region1, region_type):
 
     ##collect temp files using def above.
     train_output, train_climo, test_output, test_climo = temp_files(shift, region1,region_type,idx)
@@ -196,6 +196,8 @@ def rf_90thpercentile(n,shift,idx,train_input, test_input, region1, region_type)
     Y_train = train_output[:]
     Y_test = test_output[:]
 
+    ERA5_truth = era5_truth[:]
+
     val_subset = (10*idx) 
     #______________________________________________________#
     print(" ")
@@ -203,7 +205,10 @@ def rf_90thpercentile(n,shift,idx,train_input, test_input, region1, region_type)
     #empty lists to save Accuracy
     acc_reg2_val = []
     acc_reg2_train = []
-    acc_reg2_test = []
+    
+    acc_reg2_test = [] ##testing versus its own truth
+    acc_reg3_test = []##testing versus era5 truth
+    acc_reg4_test = [] ##testing truth vs era5 truth
 
     ##BSS Arrays
     ##BSS Arrays, all of the skill scores have 200 rows
@@ -246,6 +251,7 @@ def rf_90thpercentile(n,shift,idx,train_input, test_input, region1, region_type)
     percneg = []
     #false negative
     percFneg = []
+    
     #_______________________________________________________#
     print(" ")
     print("Establishing RF hyperparams ...")
@@ -301,8 +307,11 @@ def rf_90thpercentile(n,shift,idx,train_input, test_input, region1, region_type)
         #prediction with testing data
         pred_test1 = rf_reg2.predict(X_test)
         pred_test2 = rf_reg2.predict_proba(X_test)
+        
         #p_test.append(pred_test2)
         acc_reg2_test.append(accuracy_score(Y_test, pred_test1))
+        acc_reg3_test.append(accuracy_score(ERA5_truth, pred_test1)) 
+        acc_reg4_test.append(accuracy_score(ERA5_truth, Y_test))
 
         #_______________________statistics calcs_______________________________
         pred_class = []
@@ -438,5 +447,5 @@ def rf_90thpercentile(n,shift,idx,train_input, test_input, region1, region_type)
     shap_values = explainer.shap_values(X_test)
     shap_obj = explainer(X_test) ##return this value to plot. 
     print("Done.")
-    return test90_acc, fulltest_acc, shap_obj, posXtest, FposXtest, negXtest, FnegXtest;
+    return test90_acc, fulltest_acc, shap_obj, posXtest, FposXtest, negXtest, FnegXtest, acc_reg2_test, acc_reg3_test, acc_reg4_test;
 
