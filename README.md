@@ -16,11 +16,11 @@
 
 Please check `EllipseDef_ERA5.py` and `UFS_EllipseDef.py` to ensure your correctly saved ERA-5 or UFS file locations are used. 
 
-Additionally, the code uses an older version (Python 3) of cartopy for plotting circumpolar views of the vortex. If the plotting lines return issues, and you do not wish to modify the cartopy distinction, comment them out or remove them. It will not affect the running of the code. 
+Additionally, the code uses an older version (**Python 3**) of cartopy for plotting circumpolar views of the vortex. If the plotting lines return issues, and you do not wish to modify the cartopy distinction, comment them out or remove them. It will not affect the running of the code. 
 
 * `MBE.py` contains functions to calculate and plot forecast biases and errors.
 
-    * There are three MBE .ipynbs here that use the forecast bias calculation to plot a box and whisker/barplots for the desired feature (TestwSig) or for plotting temperatures/ellipse metrics over SSWs (SSW_Temps, SSW_Test).
+    * There are three MBE *.ipynbs* here that use the forecast bias calculation to plot a box and whisker/barplots for the desired feature (*TestwSig*) or for plotting temperatures/ellipse metrics over SSWs (*SSW_Temps, SSW_Test*).
     * The test images from these are in the main `images` subfolder.
 
 * `Save_AreaWeighted` and `Save_AreaComposite` are used to modify GPH and Temp data to be used for input/output data, and in creating cross sections of RF results. The GPH files referenced are NOT in this repo; they were downloaded from ECMWF in a separate file location. They were too large to include here.
