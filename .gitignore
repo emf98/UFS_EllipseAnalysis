@@ -7,6 +7,11 @@ UFS_metrics/CAP_ERA5_GPH100.p
 UFS_metrics/CAP_ERA5_GPHanoms100.p
 UFS_metrics/CAP_UFS_GPH100.p
 UFS_metrics/CAP_UFS_GPHanoms100.p
+UFS_metrics/CAP_ERA5_GPH10.p
+UFS_metrics/CAP_ERA5_GPHanoms10.p
+UFS_metrics/UFS_gph.p
+era5/1959anom_capGPH10.p
+era5/1959composite_capGPH10.p
 era5/1959anom_capGPH100.p
 era5/1959composite_capGPH100.p
 era5/1959_gphNA_2deg_100.p
