@@ -102,38 +102,38 @@ def preprocess_andopen(region, dataset, ufs_index, region_type_file):
     print("Returning final input array.")
     ##need to check if ERA5 or UFS to account for choosing prototype from UFS. 
     if dataset == str("ERA5"):
-        if region == str('Europe') or region == str('Canada'):
-            metrics_list = ["Geopotential Height (m)","Central Latitude ($^o$)",
-                        "Central Longitude ($^o$)","Zonal-Mean Wind (m/s)"]
+        if region == str('Europe') or region == str('SEUS'):
+            metrics_list = ["Geopotential Height (m)","Central Longitude ($^o$)",
+                            "Zonal-Mean Wind (m/s)", "Size (10$^7$m)"]
             input[:,0] = gph[:,:,:18].reshape((7*8*18))
-            input[:,1] = cenlat10[:,:,:18].reshape((7*8*18))
-            input[:,2] = cenlon10[:,:,:18].reshape((7*8*18))
-            input[:,3] = wind10[:,:,:18].reshape((7*8*18))
+            input[:,1] = cenlon10[:,:,:18].reshape((7*8*18))
+            input[:,2] = wind10[:,:,:18].reshape((7*8*18))
+            input[:,3] = size10[:,:,:18].reshape((7*8*18))
             
-        elif region == str('SEUS'):
+        elif region == str('Canada'):
             metrics_list = ["Geopotential Height (m)","Central Latitude ($^o$)",
-                        "Size ( *10$^7$m)","Zonal-Mean Wind (m/s)"]
+                        "Zonal-Mean Wind (m/s)","Size (10$^7$m)"]
             input[:,0] = gph[:,:,:18].reshape((7*8*18))
             input[:,1] = cenlat10[:,:,:18].reshape((7*8*18))
-            input[:,2] = size10[:,:,:18].reshape((7*8*18))
-            input[:,3] = wind10[:,:,:18].reshape((7*8*18))
+            input[:,2] = wind10[:,:,:18].reshape((7*8*18))
+            input[:,3] = size10[:,:,:18].reshape((7*8*18))
             
     if dataset == str("UFS"):
-        if region == str('Europe') or region == str('Canada'):
-            metrics_list = ["Geopotential Height (m)","Central Latitude ($^o$)",
-                        "Central Longitude ($^o$)","Zonal-Mean Wind (m/s)"]
+        if region == str('Europe') or region == str('SEUS'):
+            metrics_list = ["Geopotential Height (m)","Central Longitude ($^o$)",
+                            "Zonal-Mean Wind (m/s)", "Size (10$^7$m)"]
             input[:,0] = gph[:,:,ufs_index,:18].reshape((7*8*18))
-            input[:,1] = cenlat10[:,:,ufs_index,:18].reshape((7*8*18))
-            input[:,2] = cenlon10[:,:,ufs_index,:18].reshape((7*8*18))
-            input[:,3] = wind10[:,:,ufs_index,:18].reshape((7*8*18))
+            input[:,1] = cenlon10[:,:,ufs_index,:18].reshape((7*8*18))
+            input[:,2] = wind10[:,:,ufs_index,:18].reshape((7*8*18))
+            input[:,3] = size10[:,:,ufs_index,:18].reshape((7*8*18))
             
-        elif region == str('SEUS'):
+        elif region == str('Canada'):
             metrics_list = ["Geopotential Height (m)","Central Latitude ($^o$)",
-                        "Size ( *10$^7$m)","Zonal-Mean Wind (m/s)"]
+                        "Zonal-Mean Wind (m/s)","Size (10$^7$m)"]
             input[:,0] = gph[:,:,ufs_index,:18].reshape((7*8*18))
             input[:,1] = cenlat10[:,:,ufs_index,:18].reshape((7*8*18))
-            input[:,2] = size10[:,:,ufs_index,:18].reshape((7*8*18))
-            input[:,3] = wind10[:,:,ufs_index,:18].reshape((7*8*18))
+            input[:,2] = wind10[:,:,ufs_index,:18].reshape((7*8*18))
+            input[:,3] = size10[:,:,ufs_index,:18].reshape((7*8*18))
     
     ###################################################
     print("Opening corresponding temperature data and indices...")
