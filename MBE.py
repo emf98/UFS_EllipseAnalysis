@@ -128,7 +128,7 @@ def MBE_barplot(lead_times,forecast_dates, prototypes, colors,
     bar_width = 0.18
     
     fig, axes = plt.subplots(4, 1, figsize=(14, 14))
-    plt.suptitle(f'{title_str} Mean Forecast Error by UFS Initalization and Prototype', fontsize=18)
+    plt.suptitle(f'{title_str} Mean Forecast Error by UFS Initalization and Prototype', fontsize=21)
     
     axes = axes.flatten()
     for i in range(4):
@@ -149,19 +149,19 @@ def MBE_barplot(lead_times,forecast_dates, prototypes, colors,
     
         #x-axis formatting
         ax.set_xticks(x + bar_width*1.5)
-        ax.set_xticklabels(forecast_dates, fontsize=12)
+        ax.set_xticklabels(forecast_dates, fontsize=16)
     
         #y-axis formatting
         ax.set_ylim(ylim_low, ylim_high)
         #ax.yaxis.set_major_locator(mticker.MultipleLocator(10))
-        ax.set_ylabel(lead_times[i], fontsize=14)
+        ax.set_ylabel(lead_times[i], fontsize=18)
         ax.tick_params(labelsize=12)
     
         ax.axhline(y=0, color='k', linestyle='-', lw = 0.9)
         if i == 0:
             ax.legend(bbox_to_anchor=(0.85, 0.97), loc='upper left')
         if i == 3:
-            ax.set_xlabel("Forecast Initalization", fontsize=15)
+            ax.set_xlabel("Forecast Initalization", fontsize=16)
     
     plt.tight_layout()
     plt.subplots_adjust(top=0.95)
@@ -173,7 +173,7 @@ def Error_BWplot(lead_times,forecast_dates, prototypes, colors,
                 error_bulk, title_str, save_str, ylim_low, ylim_high):
     
     fig, axes = plt.subplots(4, 1, figsize=(14, 14), sharey=True)
-    plt.suptitle(f'{title_str} Forecast Error Distributions by UFS Initalization and Prototype', fontsize=18)
+    plt.suptitle(f'{title_str} Forecast Error Distributions by UFS Initalization and Prototype', fontsize=21)
    
     nF = len(forecast_dates) #should be 8
     nP = len(prototypes) #should be 4... depending
@@ -203,17 +203,17 @@ def Error_BWplot(lead_times,forecast_dates, prototypes, colors,
                 patch.set_facecolor(colors[j])
     
         ax.set_xticks(base_x)
-        ax.set_xticklabels(forecast_dates, fontsize=12)
+        ax.set_xticklabels(forecast_dates, fontsize=16)
         ax.set_ylim(ylim_low, ylim_high)
-        ax.set_ylabel(lead_times[i], fontsize=14)
+        ax.set_ylabel(lead_times[i], fontsize=18)
         ax.axhline(0, color='black', linewidth=1)
-        ax.tick_params(axis='both', labelsize=12)
+        ax.tick_params(axis='both', labelsize=16)
         
         ax.axhline(y=0, color='k', linestyle='-', lw = 0.9)
         if i == 0:
             ax.legend(bbox_to_anchor=(0.85, 0.97), loc='upper left')
         if i == 3:
-            ax.set_xlabel("Forecast Initalization", fontsize=15)
+            ax.set_xlabel("Forecast Initalization", fontsize=16)
     
     plt.tight_layout()
     plt.subplots_adjust(top=0.95)
