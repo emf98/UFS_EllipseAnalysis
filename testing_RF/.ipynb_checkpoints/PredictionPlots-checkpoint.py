@@ -111,10 +111,10 @@ def preprocess_andopen(region, dataset, ufs_index, region_type_file):
             input[:,3] = size10[:,:,:18].reshape((7*8*18))
             
         elif region == str('Canada'):
-            metrics_list = ["Geopotential Height (m)","Central Latitude ($^o$)",
+            metrics_list = ["Geopotential Height (m)","Central Longitude ($^o$)",
                         "Zonal-Mean Wind (m/s)","Size (10$^7$m)"]
             input[:,0] = gph[:,:,:18].reshape((7*8*18))
-            input[:,1] = cenlat10[:,:,:18].reshape((7*8*18))
+            input[:,1] = cenlon10[:,:,:18].reshape((7*8*18))
             input[:,2] = wind10[:,:,:18].reshape((7*8*18))
             input[:,3] = size10[:,:,:18].reshape((7*8*18))
             
@@ -128,10 +128,10 @@ def preprocess_andopen(region, dataset, ufs_index, region_type_file):
             input[:,3] = size10[:,:,ufs_index,:18].reshape((7*8*18))
             
         elif region == str('Canada'):
-            metrics_list = ["Geopotential Height (m)","Central Latitude ($^o$)",
+            metrics_list = ["Geopotential Height (m)","Central Longitude ($^o$)",
                         "Zonal-Mean Wind (m/s)","Size (10$^7$m)"]
             input[:,0] = gph[:,:,ufs_index,:18].reshape((7*8*18))
-            input[:,1] = cenlat10[:,:,ufs_index,:18].reshape((7*8*18))
+            input[:,1] = cenlon10[:,:,ufs_index,:18].reshape((7*8*18))
             input[:,2] = wind10[:,:,ufs_index,:18].reshape((7*8*18))
             input[:,3] = size10[:,:,ufs_index,:18].reshape((7*8*18))
     
