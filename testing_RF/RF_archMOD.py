@@ -17,6 +17,7 @@ import pickle
 import matplotlib.pyplot as plt
 
 import keras
+import shap
 
 import random
 from random import seed
@@ -176,8 +177,31 @@ def rf_featselect(n, shift,idx, train_input, test_input, region1, region_type):
     print(f'Accuracy, Validation: {np.mean(acc_reg1_val) * 100:.2f}%')
     print(f'Accuracy, Training: {np.mean(acc_reg1_train) * 100:.2f}%')
     print(f'Accuracy, Testing: {np.mean(acc_reg1_test) * 100:.2f}%')
+    ##SHAP for feature selection
+    print('###################################################')
+    print('SHAP feature selection ...')
+    #explainer
+    explainer = shap.TreeExplainer(rf_reg1)
+    ##get values
+    shap_values = explainer.shap_values(X_test)
+    shap_obj = explainer(X_test)
+    print(shap_obj.shape)
+    ##obtain actual VALUES for SHAP from the negative category
+    shap_vals = shap_obj.values[:, :, 0]   #(n_samples, n_features)
+    #mean absolute SHAP per feature
+    mean_abs_shap = np.mean(np.abs(shap_vals), axis=0)
+    #sort features by importance
+    order = np.argsort(mean_abs_shap)[::-1]
+    sorted_shap = mean_abs_shap[order]
+    #cumulative fraction of SHAP importance
+    cum_frac = np.cumsum(sorted_shap) / np.sum(sorted_shap)
+    #minimum number of features explaining 90%
+    threshold = 0.90
+    N90 = np.searchsorted(cum_frac, threshold) + 1
+    print(f"{N90} features explain {threshold*100:.0f}% of total SHAP importance")
+    top90_idx = order[:N90]
     
-    return important;
+    return important, top90_idx, shap_obj;
 
 #_________________________________________________________________________#
 ##definition statement for ACC
