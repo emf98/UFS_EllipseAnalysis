@@ -100,7 +100,7 @@ def BW_bulk_array(actual, forecast):
             error_bulk[i,0,j] = error_all_yearly_mean
 
             #14 days
-            error_14 = calculate_errors(a[:,j,7:13], f[:,j,7:13])
+            error_14 = calculate_errors(a[:,j,7:13], f[:,j,7:13]) #showing for that specific week ...
             error_14 = np.nanmean(error_14, axis=1) 
             error_bulk[i,1,j] = error_14
 
