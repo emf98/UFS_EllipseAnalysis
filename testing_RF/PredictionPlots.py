@@ -228,9 +228,11 @@ def BWplot(Tpos,Tneg,Fpos,Fneg,metrics_list,loc_str,save_str):
     metrics = metrics_list
     ticks = ['True +', 'False -', 'True -', 'False +'] #set tick numbers for dataset
     ind = [2, 4, 6, 8]  # the x locations for the groups
+    y1 = [-450, -200, -30, -10000000]
+    y2 = [300, 200, 80, 70000000]
     w = 0.25 #box-plot width
     c = ["midnightblue","royalblue","mediumvioletred","magenta"]
-    fs = 14
+    fs = 16
 
     fig, axes = plt.subplots(4, 1, figsize=(12, 12))
     plt.suptitle("Distribution of RF Input Features, "+str(loc_str), fontsize = 18, x=0.53)
@@ -253,6 +255,8 @@ def BWplot(Tpos,Tneg,Fpos,Fneg,metrics_list,loc_str,save_str):
                 patch.set_facecolor(color)
         axes[i].set_xticks(ind)                  
         axes[i].set_xticklabels(ticks, fontsize=fs)  
+        axes[i].set_ylim((y1[i], y2[i])) #setting limits
+        axes[i].yaxis.set_label_coords(-0.065, 0.5) #move the y lables to be equal
         axes[i].set_ylabel(str(metrics[i]), fontsize=fs)
         axes[i].tick_params(axis='y', labelsize=fs)
 
