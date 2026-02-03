@@ -111,10 +111,10 @@ def preprocess_andopen(region, dataset, ufs_index, region_type_file):
             input[:,3] = size10[:,:,:10].reshape((7*8*10))
             
         elif region == str('Canada'):
-            metrics_list = ["Geopotential Height (m)","Central Latitude ($^o$)",
+            metrics_list = ["Geopotential Height (m)","Central Longitude ($^o$)",
                         "Zonal-Mean Wind (m/s)","Size (10$^7$m)"]
             input[:,0] = gph[:,:,:10].reshape((7*8*10))
-            input[:,1] = cenlat10[:,:,:10].reshape((7*8*10))
+            input[:,1] = cenlon10[:,:,:10].reshape((7*8*10))
             input[:,2] = wind10[:,:,:10].reshape((7*8*10))
             input[:,3] = size10[:,:,:10].reshape((7*8*10))
             
@@ -128,10 +128,10 @@ def preprocess_andopen(region, dataset, ufs_index, region_type_file):
             input[:,3] = size10[:,:,ufs_index,:10].reshape((7*8*10))
             
         elif region == str('Canada'):
-            metrics_list = ["Geopotential Height (m)","Central Latitude ($^o$)",
+            metrics_list = ["Geopotential Height (m)","Central Longitude ($^o$)",
                         "Zonal-Mean Wind (m/s)","Size (10$^7$m)"]
             input[:,0] = gph[:,:,ufs_index,:10].reshape((7*8*10))
-            input[:,1] = cenlat10[:,:,ufs_index,:10].reshape((7*8*10))
+            input[:,1] = cenlon10[:,:,ufs_index,:10].reshape((7*8*10))
             input[:,2] = wind10[:,:,ufs_index,:10].reshape((7*8*10))
             input[:,3] = size10[:,:,ufs_index,:10].reshape((7*8*10))
     
@@ -228,6 +228,8 @@ def BWplot(Tpos,Tneg,Fpos,Fneg,metrics_list,loc_str,save_str):
     metrics = metrics_list
     ticks = ['True +', 'False -', 'True -', 'False +'] #set tick numbers for dataset
     ind = [2, 4, 6, 8]  # the x locations for the groups
+    y1 = [-450, -200, -30, -10000000]
+    y2 = [300, 200, 80, 70000000]
     w = 0.25 #box-plot width
     c = ["midnightblue","royalblue","mediumvioletred","magenta"]
     fs = 14
@@ -252,7 +254,9 @@ def BWplot(Tpos,Tneg,Fpos,Fneg,metrics_list,loc_str,save_str):
             for patch, color in zip(bplot['boxes'], c):
                 patch.set_facecolor(color)
         axes[i].set_xticks(ind)                  
-        axes[i].set_xticklabels(ticks, fontsize=fs)  
+        axes[i].set_xticklabels(ticks, fontsize=fs) 
+        axes[i].set_ylim((y1[i], y2[i])) #setting limits
+        axes[i].yaxis.set_label_coords(-0.065, 0.5) #move the y lables to be equal
         axes[i].set_ylabel(str(metrics[i]), fontsize=fs)
         axes[i].tick_params(axis='y', labelsize=fs)
 
