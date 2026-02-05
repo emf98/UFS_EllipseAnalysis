@@ -142,19 +142,19 @@ def preprocess_andopen(region, dataset, ufs_index, region_type_file):
     TEST_temp = pickle.load(infile) 
     infile.close()
     #true pos
-    infile = open(f'./index/pos_{str(region_type_file)}.p', 'rb') 
+    infile = open(f'./index/All_pos_{str(region_type_file)}.p', 'rb') 
     pos = pickle.load(infile)
     infile.close()
     #false pos
-    infile = open(f'./index/Fpos_{str(region_type_file)}.p', 'rb') 
+    infile = open(f'./index/All_Fpos_{str(region_type_file)}.p', 'rb') 
     Fpos = pickle.load(infile)
     infile.close()
     #true neg
-    infile = open(f'./index/neg_{str(region_type_file)}.p', 'rb') 
+    infile = open(f'./index/All_neg_{str(region_type_file)}.p', 'rb') 
     neg = pickle.load(infile)
     infile.close()
     #false neg
-    infile = open(f'./index/Fneg_{str(region_type_file)}.p', 'rb') 
+    infile = open(f'./index/All_Fneg_{str(region_type_file)}.p', 'rb') 
     Fneg = pickle.load(infile)
     infile.close()
     
