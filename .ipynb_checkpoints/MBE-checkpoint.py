@@ -52,9 +52,9 @@ def calculate_errors(actual, forecast):
     
 #_____________Make Bulk MBE Array w/ Significance for Bar Plots_________________
 def BP_bulk_array(actual, forecast): 
-    error_bulk = np.zeros((4,4,8))
-    sig_mask   = np.zeros((4,4,8), dtype=bool)
-    sig_pvals  = np.zeros((4,4,8))
+    error_bulk = np.zeros((4,5,8))
+    sig_mask   = np.zeros((4,5,8), dtype=bool)
+    sig_pvals  = np.zeros((4,5,8))
     
     for i in range(4): #prototypes
         f = forecast[:, :, i, :] #indicate chosen prototype           
@@ -66,24 +66,30 @@ def BP_bulk_array(actual, forecast):
             error_bulk[i,0,j] = mbe
             sig_mask[i,0,j]   = sig
             sig_pvals[i,0,j]  = p
-        
-            #14 days
-            mbe, errs, p, sig = calculate_mbe(a[:, j, 7:13], f[:, j, 7:13])
+
+            #7 days
+            mbe, errs, p, sig = calculate_mbe(a[:, j, 0:7], f[:, j, 0:7])
             error_bulk[i,1,j] = mbe
             sig_mask[i,1,j]   = sig
             sig_pvals[i,1,j]  = p
         
-            #20 days
-            mbe, errs, p, sig = calculate_mbe(a[:, j, 14:20], f[:, j, 14:20])
+            #14 days
+            mbe, errs, p, sig = calculate_mbe(a[:, j, 7:13], f[:, j, 7:13])
             error_bulk[i,2,j] = mbe
             sig_mask[i,2,j]   = sig
             sig_pvals[i,2,j]  = p
         
-            #30 days
-            mbe, errs, p, sig = calculate_mbe(a[:, j, 21:30], f[:, j, 21:30])
+            #20 days
+            mbe, errs, p, sig = calculate_mbe(a[:, j, 14:20], f[:, j, 14:20])
             error_bulk[i,3,j] = mbe
             sig_mask[i,3,j]   = sig
             sig_pvals[i,3,j]  = p
+        
+            #30 days
+            mbe, errs, p, sig = calculate_mbe(a[:, j, 21:30], f[:, j, 21:30])
+            error_bulk[i,4,j] = mbe
+            sig_mask[i,4,j]   = sig
+            sig_pvals[i,4,j]  = p
     return error_bulk, sig_mask, sig_pvals
 
 #_____________Make Bulk Array for BW Plots_________________
@@ -100,7 +106,7 @@ def BW_bulk_array(actual, forecast):
             error_bulk[i,0,j] = error_all_yearly_mean
 
             #14 days
-            error_14 = calculate_errors(a[:,j,7:13], f[:,j,7:13])
+            error_14 = calculate_errors(a[:,j,7:13], f[:,j,7:13]) #showing for that specific week ...
             error_14 = np.nanmean(error_14, axis=1) 
             error_bulk[i,1,j] = error_14
 
@@ -127,11 +133,11 @@ def MBE_barplot(lead_times,forecast_dates, prototypes, colors,
     x = np.arange(nF)
     bar_width = 0.18
     
-    fig, axes = plt.subplots(4, 1, figsize=(14, 14))
-    plt.suptitle(f'{title_str} Mean Forecast Error by UFS Initalization and Prototype', fontsize=21)
+    fig, axes = plt.subplots(5, 1, figsize=(14, 14))
+    plt.suptitle(f'{title_str} Mean Forecast Error by UFS Initalization and Prototype', fontsize=21, x = 0.525)
     
     axes = axes.flatten()
-    for i in range(4):
+    for i in range(5):
         ax = axes[i]
     
         for j in range(nP):  #prototype index
@@ -160,7 +166,7 @@ def MBE_barplot(lead_times,forecast_dates, prototypes, colors,
         ax.axhline(y=0, color='k', linestyle='-', lw = 0.9)
         if i == 0:
             ax.legend(bbox_to_anchor=(0.85, 0.97), loc='upper left')
-        if i == 3:
+        if i == 4:
             ax.set_xlabel("Forecast Initalization", fontsize=16)
     
     plt.tight_layout()
