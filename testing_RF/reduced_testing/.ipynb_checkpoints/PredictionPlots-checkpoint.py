@@ -265,7 +265,70 @@ def BWplot(Tpos,Tneg,Fpos,Fneg,metrics_list,loc_str,save_str):
     plt.savefig(str(save_str),bbox_inches = 'tight')
     plt.show()
     return ;
+########################################################################
+def BWplot_multi(Tpos, Tneg, Fpos, Fneg, metrics_list, loc_str, save_str):
+    metrics = metrics_list
+    categories = ['True +', 'False -', 'True -', 'False +']
+    models = ['ERA-5', 'Prototype5', 'Prototype6', 'Prototype7', 'Prototype8']
+    
+    fs = 18
+    w = 0.15   #narrower boxes since we now have 5 per group
+    
+    #spacing logic
+    group_centers = np.arange(len(categories)) * 2.5
+    offsets = np.linspace(-3*w, 3*w, len(models))
+    
+    colors = ["black","midnightblue","royalblue","mediumvioletred","magenta"]
+    
+    y1 = [-450, -200, -30, -10000000]
+    y2 = [300, 200, 80, 70000000]
+    
+    fig, axes = plt.subplots(4, 1, figsize=(12, 12))
+    plt.suptitle("Distribution of RF Input Features, " + str(loc_str),fontsize=18)  
+    axes = axes.flatten()
+    
+    for i in range(4):  #loop over metrics   
+        for m, model in enumerate(models):
+            
+            #extract data for this metric and model
+            C_pos = Tpos[model][:, i]
+            F_neg = Fneg[model][:, i]
+            C_neg = Tneg[model][:, i]
+            F_pos = Fpos[model][:, i]
+            
+            #remove NaNs
+            C_pos = C_pos[~np.isnan(C_pos)]
+            F_neg = F_neg[~np.isnan(F_neg)]
+            C_neg = C_neg[~np.isnan(C_neg)]
+            F_pos = F_pos[~np.isnan(F_pos)]
+            
+            data = [C_pos, F_neg, C_neg, F_pos]
+            
+            positions = group_centers + offsets[m]
+            
+            bp = axes[i].boxplot(data,positions = positions,widths = w, patch_artist = True, manage_ticks = False)
+            
+            for patch in bp['boxes']:
+                patch.set_facecolor(colors[m])
+        
+        axes[i].set_xticks(group_centers)
+        axes[i].set_xticklabels(categories, fontsize=fs)
+        axes[i].set_ylabel(str(metrics[i]), fontsize=fs-2)
+        axes[i].set_ylim((y1[i], y2[i]))
+        axes[i].tick_params(axis='y', labelsize=fs)
+    
+    import matplotlib.patches as mpatches
 
+    legend_handles = [mpatches.Patch(color=colors[i], label=models[i])for i in range(len(models))]
+    
+    fig.legend(handles=legend_handles,loc='center left',bbox_to_anchor=(0.92, 0.5),fontsize=12)
+    
+    plt.tight_layout()
+    fig.align_ylabels()
+    plt.subplots_adjust(right=0.90, top=0.93)
+    plt.savefig(str(save_str), bbox_inches='tight')
+    plt.show()
+    
 ########################################################################
 # #horizontal cross sections
 def GPH_horzCS(GPH_cpos,GPH_cneg,GPH_Fpos,GPH_Fneg,
